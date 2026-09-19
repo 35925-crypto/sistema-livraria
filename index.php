@@ -1,6 +1,4 @@
 <?php
-// API simples para o trabalho de versionamento.
-// Os dados ficam em arquivos/livros.json para não precisar instalar banco de dados.
 
 header('Content-Type: application/json; charset=utf-8');
 
