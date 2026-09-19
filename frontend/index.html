@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Livraria</title>
+  <link rel="stylesheet" href="frontend/style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="marca">MINHA LIVRARIA</p>
+      <h1>Gerenciador de livros</h1>
+      <p>Cadastre e acompanhe os livros da livraria.</p>
+    </header>
+
+    <section class="card" aria-labelledby="titulo-formulario">
+      <h2 id="titulo-formulario">Adicionar livro</h2>
+      <form id="form-livro">
+        <input type="hidden" id="id">
+        <div class="campos">
+          <label>Título<input id="titulo" required placeholder="Ex.: Dom Casmurro"></label>
+          <label>Autor<input id="autor" required placeholder="Ex.: Machado de Assis"></label>
+          <label>Ano<input id="ano" type="number" min="0" max="2100" placeholder="Ex.: 1899"></label>
+          <label>Status
+            <select id="status"><option>Disponível</option><option>Emprestado</option></select>
+          </label>
+        </div>
+        <div class="acoes-formulario">
+          <button type="submit" id="botao-salvar">Salvar livro</button>
+          <button type="button" id="cancelar" class="secundario" hidden>Cancelar edição</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="topo-lista">
+        <h2>Livros cadastrados</h2>
+        <input id="busca" type="search" placeholder="Pesquisar por título ou autor">
+      </div>
+      <p id="mensagem" role="status"></p>
+      <div id="lista-livros" class="lista"></div>
+    </section>
+  </main>
+  <script src="frontend/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Dados locais (mantenha somente o modelo no repositório)
+arquivos/*.local.json

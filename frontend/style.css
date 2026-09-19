@@ -1,0 +1,17 @@
+:root { --azul: #1f4b99; --claro: #f4f7fb; --texto: #1b2430; --borda: #d9e0ea; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--claro); color: var(--texto); font: 16px Arial, sans-serif; }
+.container { width: min(100% - 32px, 950px); margin: 48px auto; }
+header { margin-bottom: 28px; }
+h1 { margin: 4px 0 8px; font-size: clamp(2rem, 5vw, 3rem); }
+h2 { margin-top: 0; font-size: 1.25rem; }.marca { color: var(--azul); font-weight: bold; letter-spacing: 1px; margin: 0; }
+header p:not(.marca) { color: #596579; margin: 0; }
+.card { background: white; border: 1px solid var(--borda); border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 3px 10px #243a5a0d; }
+.campos { display: grid; grid-template-columns: 2fr 2fr 1fr 1.2fr; gap: 14px; }
+label { display: grid; gap: 6px; font-weight: bold; font-size: .9rem; }
+input, select { border: 1px solid #b9c4d3; border-radius: 6px; padding: 10px; font: inherit; background: white; }
+button { background: var(--azul); color: white; border: 0; padding: 10px 15px; border-radius: 6px; font: inherit; cursor: pointer; }
+button:hover { filter: brightness(.9); }.secundario { background: #6b7280; }.perigo { background: #b42318; }
+.acoes-formulario { display: flex; gap: 10px; margin-top: 18px; }.topo-lista { display: flex; justify-content: space-between; gap: 16px; align-items: center; }.topo-lista input { width: min(100%, 290px); }
+.lista { display: grid; gap: 10px; }.livro { display: flex; align-items: center; justify-content: space-between; gap: 15px; border-top: 1px solid var(--borda); padding: 15px 0; }.livro h3 { margin: 0 0 4px; }.livro p { margin: 0; color: #596579; }.botoes { display: flex; gap: 8px; }.tag { display: inline-block; font-size: .75rem; padding: 3px 7px; border-radius: 20px; background: #dbeafe; color: #174ea6; margin-left: 6px; }.emprestado { background: #fef3c7; color: #92400e; }#mensagem { min-height: 1.3em; color: #b42318; }
+@media (max-width: 650px) { .container { margin: 25px auto; }.campos { grid-template-columns: 1fr; }.topo-lista, .livro { align-items: stretch; flex-direction: column; }.topo-lista input { width: 100%; }.botoes button { flex: 1; } }
